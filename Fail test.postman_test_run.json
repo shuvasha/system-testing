@@ -1,0 +1,319 @@
+{
+	"id": "8da32fa6-06b3-47b7-80be-0687c645e982",
+	"name": "Fail test",
+	"timestamp": "2023-12-05T02:49:00.662Z",
+	"collection_id": "30269214-bbda1413-af88-4e9f-8146-8b8c1a3fe727",
+	"folder_id": 0,
+	"environment_id": "30269214-882202b7-f35c-442c-8b59-3db3d1e11f85",
+	"totalPass": 12,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-12-05T02:48:59.561Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "86e86282-78a9-400a-b3b1-9b48da827e9f",
+			"name": "Registration",
+			"url": "localhost:5000/registration",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Duplicate entry": true
+			},
+			"testPassFailCounts": {
+				"Duplicate entry": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Duplicate entry": true
+				}
+			]
+		},
+		{
+			"id": "e3628035-9c6f-42a1-9642-f6fb41fc192b",
+			"name": "Registration-Password",
+			"url": "localhost:5000/registration",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Not a valid Password": true
+			},
+			"testPassFailCounts": {
+				"Not a valid Password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Not a valid Password": true
+				}
+			]
+		},
+		{
+			"id": "2abaeb92-a31a-4902-99d2-8f02b6ec6eee",
+			"name": "Login-InvalidUser",
+			"url": "localhost:5000/login",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Not a valid User": true,
+				"USER HAS NO VALID TOKEN": true
+			},
+			"testPassFailCounts": {
+				"Not a valid User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"USER HAS NO VALID TOKEN": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Not a valid User": true,
+					"USER HAS NO VALID TOKEN": true
+				}
+			]
+		},
+		{
+			"id": "fb68bafa-298f-4135-8e64-f1eb18d9caea",
+			"name": "Get All Users-AUTHFAIL",
+			"url": "localhost:5000/getallusers",
+			"time": 5,
+			"responseCode": {
+				"code": 403,
+				"name": "FORBIDDEN"
+			},
+			"tests": {
+				"Status code is 403": true,
+				"Access Denied": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Access Denied": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 403": true,
+					"Access Denied": true
+				}
+			]
+		},
+		{
+			"id": "240beb11-9d7c-4c74-8853-350a882ab7d6",
+			"name": "Get Student Profile-iNVALID",
+			"url": "localhost:5000/getprofile?student_id=40200",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User ID matches requested ID": true
+			},
+			"testPassFailCounts": {
+				"User ID matches requested ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"User ID matches requested ID": true
+				}
+			]
+		},
+		{
+			"id": "b31ce226-497b-4e6f-8da2-98cec774de91",
+			"name": "Student-Registration FOR FAIL",
+			"url": "localhost:5000/registration",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Default Test-Case:": true,
+				"User Inserted Successfully": true
+			},
+			"testPassFailCounts": {
+				"Default Test-Case:": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User Inserted Successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Default Test-Case:": true,
+					"User Inserted Successfully": true
+				}
+			]
+		},
+		{
+			"id": "df621ece-dadf-48eb-b0da-24d00e0c0d04",
+			"name": "deleteuser-no access",
+			"url": "localhost:5000/deleteuser",
+			"time": 5,
+			"responseCode": {
+				"code": 403,
+				"name": "FORBIDDEN"
+			},
+			"tests": {
+				"Access Denied": true
+			},
+			"testPassFailCounts": {
+				"Access Denied": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Access Denied": true
+				}
+			]
+		},
+		{
+			"id": "c206bc36-095f-4e64-84f8-9be003fab405",
+			"name": "deleteuser-Invalid",
+			"url": "localhost:5000/deleteuser",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"NO USER FOUND!!": true
+			},
+			"testPassFailCounts": {
+				"NO USER FOUND!!": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"NO USER FOUND!!": true
+				}
+			]
+		},
+		{
+			"id": "0aad2811-6b34-4a2a-9824-7acd120aed47",
+			"name": "deleteuser FOR FAIL",
+			"url": "localhost:5000/deleteuser",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"USER DELETED SUCCESSFULLY!": true
+			},
+			"testPassFailCounts": {
+				"USER DELETED SUCCESSFULLY!": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"USER DELETED SUCCESSFULLY!": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 45,
+	"collection": {
+		"requests": [
+			{
+				"id": "86e86282-78a9-400a-b3b1-9b48da827e9f",
+				"method": "POST"
+			},
+			{
+				"id": "e3628035-9c6f-42a1-9642-f6fb41fc192b",
+				"method": "POST"
+			},
+			{
+				"id": "2abaeb92-a31a-4902-99d2-8f02b6ec6eee",
+				"method": "POST"
+			},
+			{
+				"id": "fb68bafa-298f-4135-8e64-f1eb18d9caea",
+				"method": "GET"
+			},
+			{
+				"id": "240beb11-9d7c-4c74-8853-350a882ab7d6",
+				"method": "GET"
+			},
+			{
+				"id": "b31ce226-497b-4e6f-8da2-98cec774de91",
+				"method": "POST"
+			},
+			{
+				"id": "df621ece-dadf-48eb-b0da-24d00e0c0d04",
+				"method": "DELETE"
+			},
+			{
+				"id": "c206bc36-095f-4e64-84f8-9be003fab405",
+				"method": "DELETE"
+			},
+			{
+				"id": "0aad2811-6b34-4a2a-9824-7acd120aed47",
+				"method": "DELETE"
+			}
+		]
+	}
+}

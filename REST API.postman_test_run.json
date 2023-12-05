@@ -1,0 +1,404 @@
+{
+	"id": "f11c1520-c5bf-429e-97e1-37d93f7f36ea",
+	"name": "REST API",
+	"timestamp": "2023-12-05T04:37:09.956Z",
+	"collection_id": "30269214-11cf571e-32b7-44dc-9567-3bfe031cb630",
+	"folder_id": 0,
+	"environment_id": "30269214-882202b7-f35c-442c-8b59-3db3d1e11f85",
+	"totalPass": 22,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-12-05T04:37:08.981Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "b7df5c7d-e698-4825-a055-f9ca0f3a2f05",
+			"name": "Admin-Registration",
+			"url": "localhost:5000/registration",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Default Test-Case:": true,
+				"User Inserted Successfully": true
+			},
+			"testPassFailCounts": {
+				"Default Test-Case:": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User Inserted Successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Default Test-Case:": true,
+					"User Inserted Successfully": true
+				}
+			]
+		},
+		{
+			"id": "9ebdb378-0f89-4a0a-b6c3-f13871e52c5d",
+			"name": "Admin-Login",
+			"url": "localhost:5000/login",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Default Test-Case": true,
+				"Successfully Loged In": true,
+				"TOKEN TYPE STRING": true,
+				"TOKEN TYPE NOT A INT": true
+			},
+			"testPassFailCounts": {
+				"Default Test-Case": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successfully Loged In": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TOKEN TYPE STRING": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TOKEN TYPE NOT A INT": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Default Test-Case": true,
+					"Successfully Loged In": true,
+					"TOKEN TYPE STRING": true,
+					"TOKEN TYPE NOT A INT": true
+				}
+			]
+		},
+		{
+			"id": "9f562d7c-30bf-49d0-b45e-45ff84261540",
+			"name": "Get All Users",
+			"url": "localhost:5000/getallusers",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Fetch all User": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Fetch all User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Fetch all User": true
+				}
+			]
+		},
+		{
+			"id": "24f88fc4-eb3d-48a9-87d3-f51bb90c314b",
+			"name": "deleteuser ADMIN",
+			"url": "localhost:5000/deleteuser",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"USER DELETED SUCCESSFULLY!": true
+			},
+			"testPassFailCounts": {
+				"USER DELETED SUCCESSFULLY!": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"USER DELETED SUCCESSFULLY!": true
+				}
+			]
+		},
+		{
+			"id": "a01e2117-beeb-4f39-af62-27ada9d1dfad",
+			"name": "Student-Registration For deletation",
+			"url": "localhost:5000/registration",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Default Test-Case:": true,
+				"User Inserted Successfully": true
+			},
+			"testPassFailCounts": {
+				"Default Test-Case:": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User Inserted Successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Default Test-Case:": true,
+					"User Inserted Successfully": true
+				}
+			]
+		},
+		{
+			"id": "cb228245-7f6a-42fb-bfcf-96fdc01ccf8b",
+			"name": "deleteuser",
+			"url": "localhost:5000/deleteuser",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"USER DELETED SUCCESSFULLY!": true
+			},
+			"testPassFailCounts": {
+				"USER DELETED SUCCESSFULLY!": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"USER DELETED SUCCESSFULLY!": true
+				}
+			]
+		},
+		{
+			"id": "42e182b3-4ac5-425b-a5f2-15680ec79d72",
+			"name": "Student-Registration",
+			"url": "localhost:5000/registration",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Default Test-Case:": true,
+				"User Inserted Successfully": true
+			},
+			"testPassFailCounts": {
+				"Default Test-Case:": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User Inserted Successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Default Test-Case:": true,
+					"User Inserted Successfully": true
+				}
+			]
+		},
+		{
+			"id": "8559a601-9844-40d3-a150-e006af2211fe",
+			"name": "Student-Login",
+			"url": "localhost:5000/login",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Default Test-Case": true,
+				"Successfully Loged In": true,
+				"TOKEN TYPE STRING": true,
+				"TOKEN TYPE NOT A INT": true
+			},
+			"testPassFailCounts": {
+				"Default Test-Case": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successfully Loged In": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TOKEN TYPE STRING": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TOKEN TYPE NOT A INT": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Default Test-Case": true,
+					"Successfully Loged In": true,
+					"TOKEN TYPE STRING": true,
+					"TOKEN TYPE NOT A INT": true
+				}
+			]
+		},
+		{
+			"id": "22b520b6-92ca-4fcf-b18a-09e946e4d511",
+			"name": "Get Student Profile",
+			"url": "localhost:5000/getprofile?student_id=4020103",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Fetch STUDENT PROFILE": true,
+				"User ID matches requested ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Fetch STUDENT PROFILE": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User ID matches requested ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Fetch STUDENT PROFILE": true,
+					"User ID matches requested ID": true
+				}
+			]
+		},
+		{
+			"id": "35ed0b4a-2e2f-4b4d-8c57-fe87d9db8d4b",
+			"name": "deleteuser student",
+			"url": "localhost:5000/deleteuser",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"USER DELETED SUCCESSFULLY!": true
+			},
+			"testPassFailCounts": {
+				"USER DELETED SUCCESSFULLY!": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"USER DELETED SUCCESSFULLY!": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 55,
+	"collection": {
+		"requests": [
+			{
+				"id": "b7df5c7d-e698-4825-a055-f9ca0f3a2f05",
+				"method": "POST"
+			},
+			{
+				"id": "9ebdb378-0f89-4a0a-b6c3-f13871e52c5d",
+				"method": "POST"
+			},
+			{
+				"id": "9f562d7c-30bf-49d0-b45e-45ff84261540",
+				"method": "GET"
+			},
+			{
+				"id": "24f88fc4-eb3d-48a9-87d3-f51bb90c314b",
+				"method": "DELETE"
+			},
+			{
+				"id": "a01e2117-beeb-4f39-af62-27ada9d1dfad",
+				"method": "POST"
+			},
+			{
+				"id": "cb228245-7f6a-42fb-bfcf-96fdc01ccf8b",
+				"method": "DELETE"
+			},
+			{
+				"id": "42e182b3-4ac5-425b-a5f2-15680ec79d72",
+				"method": "POST"
+			},
+			{
+				"id": "8559a601-9844-40d3-a150-e006af2211fe",
+				"method": "POST"
+			},
+			{
+				"id": "22b520b6-92ca-4fcf-b18a-09e946e4d511",
+				"method": "GET"
+			},
+			{
+				"id": "35ed0b4a-2e2f-4b4d-8c57-fe87d9db8d4b",
+				"method": "DELETE"
+			}
+		]
+	}
+}
