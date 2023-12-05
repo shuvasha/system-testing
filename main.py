@@ -6,7 +6,6 @@ from flask import Flask, request, jsonify
 from flask_mysqldb import MySQL
 import sqlalchemy.exc
 from enum import Enum
-
 from functools import wraps
 
 
@@ -39,7 +38,7 @@ def token_required(role: [Enum] = []):
                 cursor = mysql.connection.cursor()
                 cursor.execute("SELECT student_id, role FROM user WHERE student_id=" + data['student_id'])
                 current_user = cursor.fetchone()
-                print(current_user[1])
+                print(current_user)
                 if current_user is None:
                     return {
                     "message": "Invalid Authentication token!",
@@ -49,7 +48,7 @@ def token_required(role: [Enum] = []):
 
                 if current_user[1] not in role:
                     return {
-                        "message": "Invalid Authentication token!",
+                        "message": "UPPS!YOU DO NOT HAVE ACCESS",
                         "data": None,
                         "error": "Forbidden"
                     }, 403
@@ -87,12 +86,16 @@ def login():
 @app.route("/registration", methods = ['POST'])
 def registration():
     student_id = request.json['student_id']
-    print(student_id)
-    password = hashlib.md5(request.json['password'].encode()).hexdigest()
-    fullname = request.json['full_name']
-    email = request.json['email']
-    role = request.json['role']
+    password = request.json['password']
+    # print(student_id)
+    if len(password) > 8:
 
+        password = hashlib.md5(request.json['password'].encode()).hexdigest()
+        fullname = request.json['full_name']
+        email = request.json['email']
+        role = request.json['role']
+    else:
+        return jsonify({"message": "Please try a password more that 8 character"})
     response = {}
 
     try:
@@ -119,7 +122,26 @@ def getAllUsers():
 def getprofile():
     student_id = request.args.get('student_id')
     cursor = mysql.connection.cursor()
-    cursor.execute("SELECT * FROM user where student_id =%s AND role =%s", (student_id, "admin"))
+    cursor.execute("SELECT * FROM user where student_id ="+student_id)
     data = cursor.fetchall()
     cursor.close()
     return jsonify(data)
+
+@app.route("/deleteuser", methods = ['DELETE'])
+@token_required(role=["admin"])
+def deleteuser():
+    student_id = request.json['student_id']
+    try:
+        cursor = mysql.connection.cursor()
+        cursor.execute("DELETE FROM user where student_id ="+student_id)
+        check = cursor.rowcount
+        cursor.close()
+        print(mysql.connection.commit())
+        if check == 0:
+            response = "No user found"
+        else:
+            response = "User deleted"
+    except Exception as e:
+        response = format(e)
+
+    return jsonify({"message": response})
